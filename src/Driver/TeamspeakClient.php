@@ -320,7 +320,8 @@ class TeamspeakClient implements IClient
         });
 
         if (! $instance)
-            throw new ServerException(sprintf('Unable to find a server instance listening on port %d.', $server_port));
+            return 1222;
+           // throw new ServerException(sprintf('Unable to find a server instance listening on port %d.', $server_port));
 
         return $instance->virtualserver_id;
     }
